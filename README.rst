@@ -1,5 +1,7 @@
-Markup Extentions
-=================
+|Code Climate| |Build Status| |codecov| |PyPI version|
+
+muextentions
+============
 
 Tasks:
 
@@ -31,3 +33,12 @@ muextentions/
     - markdown/
   - executor/ - Wrappers
 
+
+.. |Code Climate| image:: https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg
+   :target: https://codeclimate.com/github/pedrohdz/muextentions
+.. |Build Status| image:: https://travis-ci.org/pedrohdz/muextentions.svg?branch=master
+   :target: https://travis-ci.org/pedrohdz/muextentions
+.. |codecov| image:: https://codecov.io/gh/pedrohdz/muextentions/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/pedrohdz/muextentions
+.. |PyPI version| image:: https://badge.fury.io/py/muextentions.svg
+   :target: https://badge.fury.io/py/muextentions
