@@ -1,0 +1,9 @@
+[run]
+branch = True
+source = muextentions/
+
+[paths]
+source = muextentions/
+
+[report]
+fail_under = 0
