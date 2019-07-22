@@ -1,9 +1,9 @@
 [run]
 branch = True
-source = muextentions/
+source = muextensions/
 
 [paths]
-source = muextentions/
+source = muextensions/
 
 [report]
 fail_under = 0

@@ -1,6 +1,6 @@
 |Code Climate| |Build Status| |codecov| |PyPI version|
 
-muextentions
+muextensions
 ============
 
 Tasks:
@@ -18,7 +18,7 @@ Tasks:
 
 Layout:
 
-muextentions/
+muextensions/
   - contrib/ - Exports to allow plugging into this.
       - hovercraft/
           - plantuml-image
@@ -35,10 +35,10 @@ muextentions/
 
 
 .. |Code Climate| image:: https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg
-   :target: https://codeclimate.com/github/pedrohdz/muextentions
-.. |Build Status| image:: https://travis-ci.org/pedrohdz/muextentions.svg?branch=master
-   :target: https://travis-ci.org/pedrohdz/muextentions
-.. |codecov| image:: https://codecov.io/gh/pedrohdz/muextentions/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/pedrohdz/muextentions
-.. |PyPI version| image:: https://badge.fury.io/py/muextentions.svg
-   :target: https://badge.fury.io/py/muextentions
+   :target: https://codeclimate.com/github/pedrohdz/muextensions
+.. |Build Status| image:: https://travis-ci.org/pedrohdz/muextensions.svg?branch=master
+   :target: https://travis-ci.org/pedrohdz/muextensions
+.. |codecov| image:: https://codecov.io/gh/pedrohdz/muextensions/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/pedrohdz/muextensions
+.. |PyPI version| image:: https://badge.fury.io/py/muextensions.svg
+   :target: https://badge.fury.io/py/muextensions

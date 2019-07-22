@@ -2,7 +2,7 @@ import os
 
 from pelican import signals, logger
 
-from muextentions.connector.docutils import plantuml
+from muextensions.connector.docutils import plantuml
 
 
 BUILD_PATH = '_generated'

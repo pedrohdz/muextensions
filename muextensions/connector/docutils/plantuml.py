@@ -4,15 +4,7 @@ from pathlib import Path
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
-from muextentions.executor.plantuml import PlantUmlWrapper
-
-
-def align_choice(argument):
-    return directives.choice(argument, ('left', 'center', 'right'))
-
-
-def format_choice(argument):
-    return directives.choice(argument, ('png', 'svg'))
+from muextensions.executor.plantuml import PlantUmlWrapper
 
 
 class PlantUmlDocutilsDirectiveBase(Directive):
@@ -27,7 +19,7 @@ class PlantUmlDocutilsDirectiveBase(Directive):
     final_argument_whitespace = True
     option_spec = {
         # image node options
-        'align': align_choice,
+        'align': lambda _: directives.choice(_, ('left', 'center', 'right')),
         'alt': directives.unchanged,
         'class': directives.class_option,
         'height': directives.nonnegative_int,
@@ -35,7 +27,7 @@ class PlantUmlDocutilsDirectiveBase(Directive):
         'width': directives.nonnegative_int,
         # custom options
         'basename': directives.unchanged,
-        'format': format_choice,
+        'format': lambda _: directives.choice(_, ('png', 'svg'))
     }
 
     @property

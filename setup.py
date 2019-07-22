@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 def version():
     version_re = re.compile(r'^\s*__version__\s*=\s*[\'"](.*)[\'"]')
-    with open('muextentions/__init__.py', 'rb') as handle:
+    with open('muextensions/__init__.py', 'rb') as handle:
         return str(ast.literal_eval(version_re.search(
             handle.read().decode('utf-8')).group(1)))
 
@@ -34,13 +34,13 @@ _CI_REQUIRE = [
 ]
 
 setup(
-    name='muextentions',
+    name='muextensions',
     # version=version(),
     author='Pedro H.',
     author_email='5179251+pedrohdz@users.noreply.github.com',
     description='Markup extentions',
     long_description=long_description(),
-    url='https://github.com/pedrohdz/muextentions',
+    url='https://github.com/pedrohdz/muextensions',
     license='MIT',
     classifiers=[
         'Development Status :: 3 - Alpha',

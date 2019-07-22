@@ -1,7 +1,7 @@
 import os
 import logging
 
-from muextentions.connector.docutils import plantuml
+from muextensions.connector.docutils import plantuml
 
 
 BUILD_PATH = '_generated'

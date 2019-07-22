@@ -1,4 +1,3 @@
-#! /use/bin/env python
 # pylint: disable=missing-docstring
 
 import hashlib
@@ -8,7 +7,7 @@ import shutil
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from .executer import execute, ExecutionError
+from . import execute, ExecutionError
 
 
 LOG = logging.getLogger(__name__)
@@ -35,7 +34,7 @@ class PlantUmlWrapper():
         self._log = logging.getLogger(type(self).__name__)
 
     def write(self, output_file):
-        with TemporaryDirectory(prefix='muextentions-plantuml-') as work_dir:
+        with TemporaryDirectory(prefix='muextensions-plantuml-') as work_dir:
             self._process(work_dir, output_file)
 
     def hashcode(self):
@@ -50,7 +49,7 @@ class PlantUmlWrapper():
         self._write_uml_file(puml_path)
         output_path = self._execute_plantuml(puml_path)
         self._log.debug('Moving "%s" to "%s".', output_path, output_file)
-        shutil.move(output_path, output_file)
+        shutil.move(str(output_path), str(output_file))
 
     def _execute_plantuml(self, puml_path):
         option = '-t{}'.format(self._format)
@@ -65,16 +64,6 @@ class PlantUmlWrapper():
         return ('{}\n'.format(line).encode(self._encoding) for line in data)
 
     def _write_uml_file(self, puml_path):
-        with open(puml_path, 'bw+') as handle:
+        with puml_path.open('bw+') as handle:
             for line in self._uml_iterator():
                 handle.write(line)
-
-
-def main():
-    wrapper = PlantUmlWrapper(['Bob->Alice : hello'])
-    wrapper.write('foo')
-
-
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG)
-    main()

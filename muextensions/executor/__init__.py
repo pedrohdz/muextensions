@@ -1,4 +1,3 @@
-#! /use/bin/env python
 # pylint: disable=missing-docstring
 
 import logging
@@ -31,8 +30,7 @@ def execute(command, timeout=30):
     if process.returncode != 0:
         _log_process_failed(process, stdout, stderr)
         raise ExecutionError('Call to PlantUML failed')
-    LOG.debug('Command "%s" succeeded. STDOUT: %s STDERR: %s',
-              process.args, stdout, stderr)
+    _log_process_sucess(process, stdout, stderr)
 
 
 def _log_process_sucess(process, stdout, stderr):
@@ -52,7 +50,7 @@ def _kill_process(process):
 def _log_process(success, process, stdout, stderr):
     comment = 'succeeded' if success else 'failed'
     if success:
-        comment = 'success'
+        comment = 'succeeded'
         level = logging.DEBUG
     else:
         comment = 'failed'
