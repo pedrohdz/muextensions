@@ -8,11 +8,8 @@ from muextensions.executor.plantuml import PlantUmlWrapper
 
 
 class PlantUmlDocutilsDirectiveBase(Directive):
-    # pylint: disable=line-too-long, too-few-public-methods
     # Potential template for this:
-    #   - https://github.com/getpelican/pelican-plugins/blob/master/plantuml/plantuml_rst.py#L22  # NOQA
     #   - http://docutils.sourceforge.net/docs/howto/rst-directives.html
-    # pylint: enable=line-too-long
     has_content = True
     required_arguments = 0
     optional_arguments = 0

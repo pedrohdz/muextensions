@@ -15,6 +15,8 @@ Tasks:
 
 5. Add REST callers for execs.
 
+6. Look into https://pypi.org/project/pbr/
+
 
 Layout:
 
