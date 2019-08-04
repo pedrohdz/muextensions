@@ -1,7 +1,9 @@
+dist: xenial
 language: python
 python:
   - "3.5"
   - "3.6"
+  - "3.7"
 
 install:
   - pip install --upgrade pip
@@ -11,3 +13,26 @@ script:
   - tox
   - coverage combine .coverage-py*
   - codecov
+
+jobs:
+  include:
+    - stage: Publish to PyPI
+      python: "3.7"
+      # Do not inherit `install` and `script` from above.  No reason to run
+      # checks again on deploy.
+      install: 'true'
+      script: 'true'
+      deploy:
+        provider: pypi
+        on:
+          tags: true
+          repo: pedrohdz/muextensions
+          condition: '$TRAVIS_TAG =~ ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+$'
+        user: '@token'
+        # -- PyPI - Production
+        password:
+          secure: o/pjejEPk4c+snMc+EwMmUfaoSJcOBC1CH0bvMyUSb2pZV3G5pTbnxvSrYEaBRgZX0P449SYlz+GxLMRZAE76F6rNS3KwO27cUREOHYO6V2LxTTb3LwM/HWBBmNJ73wH4k/zoU82RD6wqJG7819HgMtAC8UQcUW4XWzlqhtLgUP7sEHBxnHPBSEfKJ+TJrMAvtXhu6XJCi660k93EYF0WQ4Y0xnYUkhwYwrhKstO4lk2aPryNCaJP2Kv81aGW6l3N4PbonlIAKAM75njxcNrW1/SfjbkNNP0xbNCC/wDb9zjYJhRZfJ+3tegR4oAbdR1clhEKzdmF9Ijr21VklToOUjVkPf+YAD6PUzVsBvCKADDHXT7vBzx/8HLQ/aDxXVQljssuU1cLUaOJsWeQom2RQe/6tLdjrhJFUYX+WQdHT3YTIe+5LzEGrN6+qMmdiPpHwMXHwzGuzNoCPX5dBxPsI8cZWN3BXu66esxAi9JQWSR/WfjiecmAa2WGDVmZe+35L5P16bK2OVHx04sDA1lJcfNRpWyy/dJwNUdDdGbbC1aQvA+38OAR5qMRTWXOfTAtL4YhGAOyLIcAII57DgQSKu2RR93y4TMIt1xVyeEODK/ftk7I4GF4N0ANKHku70NMWm+Q3g8q7LMEjH/4zkVpoBhVTdJ0afHyz/lgNFMNsM=
+        # -- PyPI - Testing
+        #server: https://test.pypi.org/legacy/
+        #password:
+        #  secure: XtEyLvhpJCVVmO6+HORWOitefPIpvQToZO+bH8FCvOrc62BYug+8KCD+y0y2v9hlYUT6dBaHbN+bmIREVFEK9/lrJGotQU85QKP3we80RM6vmstPK8nPF8w2Jx2mxVOv0x4Wsq3BvFqW3cKR0yN2fkmbINIl7eDGCYUThSpVJR0oiZHZfhviG9Qg+99GozNwQV5o23f14gKhoSVTszQYz0t4n3bZZ19DbDZqmHaYUN/0bIriW24K+dMXd1yk5ot4EN8ojzqidUBBRMIT76qYokp3u/ZPFTNoikcRK60RunpHgx7P2UHLl6nEq6EJWinRcHOnQk8jlhnTuyaCuexsRE/FC/pvWaPlvQWx/9JoawArnukCWhPa/gWVPpS4b4GoshpRPg18yFSHvc66JdO3EtNH3MBdVTMRpbrx8heIAM/RrOekP/yL6dcPxPk5qG8BS8LCqsb4U2XK3RFHnaUn9SaK0mevd90iDq/TbJrbX4/htKZNSZTfLLPyY+SvphSbv5E1u68O6ED2rN992LLP8F+g2+3qNEh6iAfyQZ1fYETOEEcXcasVDknz+P+Sts7t6zt4Av/gVS129duJ4MwQ2vjxhi5bfdrTG8dPnKjKBqqngdljgGrnPByr8yZnf+UK7W82X5S50xtRHbSYEYewVRYcpJPw47H0wpZhM0z6bKw=
