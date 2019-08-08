@@ -27,9 +27,10 @@ Hovercraft!
 -----------
 
 Support for `Hovercraft! <HOVERCRAFT_>`_ is currently pending pull request
-regebro/hovercraft#196 which adds the ``--directive-plugin`` argument to the
-``hovercraft`` command.  The source code introducing ``--directive-plugin`` can
-be found in `pedrohdz/hovercraft <PATCHED_>`_ under the ``directives`` branch.
+`regebro/hovercraft#196 <https://github.com/regebro/hovercraft/pull/196>`_
+which adds the ``--directive-plugin`` argument to the ``hovercraft`` command.
+The source code introducing ``--directive-plugin`` can be found in
+`pedrohdz/hovercraft <PATCHED_>`_ under the ``directives`` branch.
 
 Here is a quick example to see *muextensions*, make sure to complete the
 `Prerequisites`_ first.  We will utilize the demo presentation in
