@@ -16,9 +16,11 @@ def long_description():
 
 _TEST_REQUIRE = [
     # coverage 5 is still in alpha.
+    'beautifulsoup4',
     'coverage<5',
-    'pytest-cov',
+    'decorator',
     'pytest',
+    'pytest-cov',
     # Optional external dependencies needed while testing.
     'docutils',
     'pelican',

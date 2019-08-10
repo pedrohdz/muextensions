@@ -5,9 +5,11 @@ from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
 from muextensions.executor.plantuml import PlantUmlWrapper
+from . import Connector
 
 
-class PlantUmlDocutilsDirectiveBase(Directive):
+class PlantUmlDocutilsDirectiveBase(Connector, Directive):
+    # FIXME - Make like `DitaaImageDirectiveBase`!
     # Potential template for this:
     #   - http://docutils.sourceforge.net/docs/howto/rst-directives.html
     has_content = True
@@ -26,21 +28,6 @@ class PlantUmlDocutilsDirectiveBase(Directive):
         'basename': directives.unchanged,
         'format': lambda _: directives.choice(_, ('png', 'svg'))
     }
-
-    @property
-    def target_dir(self):
-        # pylint: disable=no-member
-        return self._target_dir
-
-    @property
-    def base_uri(self):
-        # pylint: disable=no-member
-        return self._base_uri
-
-    @property
-    def create_dirs(self):
-        # pylint: disable=no-member
-        return self._create_dirs
 
     def run(self):
         plantuml_format = self.options.get('format', 'png')
@@ -72,4 +59,7 @@ def register(target_dir, base_uri=None, create_dir=False):
                            {'_target_dir': target_dir,
                             '_base_uri': base_uri,
                             '_create_dirs': create_dir})
+    directives.register_directive('plantuml-image', directive_class)
+
+    # TODO - Depricate the `plantuml` directive in favor of `plantuml-image`.
     directives.register_directive('plantuml', directive_class)

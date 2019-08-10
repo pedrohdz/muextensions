@@ -1,15 +1,18 @@
-import os
-import logging
+from pathlib import Path
 
-from muextensions.connector.docutils import plantuml
+from muextensions.connector.docutils import plantuml, ditaa
 
 
 BUILD_PATH = '_generated'
 
 
 def register(args):
-    # FIXME - Delete log config
-    logging.basicConfig(level=logging.DEBUG)
-
-    generate_dir = os.path.join(args.targetdir, BUILD_PATH)
-    plantuml.register(generate_dir, BUILD_PATH, True)
+    generate_dir = Path(args.targetdir).joinpath(BUILD_PATH)
+    plantuml.register(
+        target_dir=generate_dir,
+        base_uri=BUILD_PATH,
+        create_dir=True)
+    ditaa.register(
+        target_dir=generate_dir,
+        base_uri=BUILD_PATH,
+        create_dir=True)
