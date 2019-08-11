@@ -61,6 +61,68 @@ Pelican
 
 
 
+Development
+===============================================================================
+
+Setting up for development:
+
+.. code:: bash
+
+  git clone git@github.com:pedrohdz/muextensions.git
+  cd muextensions
+  python3.5 -m venv .venv
+  source .venv/bin/activate
+  pip install -U pip
+  pip install -e .[ci,test]
+
+
+Make sure you have a good baseline by running ``tox``.  Executing ``tox`` from
+within a *venv* (Python virtual environments) will cause ``pip`` related errors
+during the tests, either exit the *venv* via the ``deactivate`` command, or
+execute ``tox`` from a new terminal.
+
+.. code:: bash
+
+  deactivate
+  tox
+  source .venv/bin/activate
+
+To execute the unit tests:
+
+.. code:: bash
+
+  pytest
+
+To execute and view the unit test code coverage:
+
+.. code:: bash
+
+  pytest --cov-report=html --cov
+  open htmlcov/index.html
+
+To run the integration tests, assuming both ``ditaa`` and ``plantuml`` are
+installed on the system, use the ``--run-integration`` option.  To save the
+output of the integration tests for examination, add the
+``--save-integration-output-to`` option:
+
+.. code:: bash
+
+  pytest --run-integration
+  pytest --run-integration --save-integration-output-to=./tmp
+
+
+Contribution
+------------
+
+When contributing, please keep in mind the following before submitting the pull
+request:
+
+- Make sure that the ``tox`` checks complete without failure.
+- When making code changes, add relevant unit tests.
+- If fixing a bug, please try and add a regression test.  It should fail before
+  the fix is applies, and pas after.
+
+
 Appendix
 ===============================================================================
 
