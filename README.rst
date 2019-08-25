@@ -240,6 +240,16 @@ Todo list
 - [X] Add Ditaa support.
 - [ ] Finish adding plugin support to Hovercraft!  (`regebro/hovercraft#196
   <hovercraft_pr_196_>`_).
+- [-] Spread the word:
+
+  - [-] Try and get it listed in `getpelican/pelican-plugins
+    <https://github.com/getpelican/pelican-plugins>`_
+    (`getpelican/pelican-plugins#1165
+    <https://github.com/getpelican/pelican-plugins/pull/1165>`_).
+  - [-] Try and get it listed in `stathissideris/ditaa
+    <https://github.com/stathissideris/ditaa>`_ (`stathissideris/ditaa#55
+    <https://github.com/stathissideris/ditaa/pull/55>`_).
+
 - [ ] Add GitHub tickets for each of the following.
 - [ ] Add caching.
 - [ ] Add a ``plantuml-text`` directive.  This should generate and embed ASCII
