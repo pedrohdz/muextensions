@@ -31,7 +31,7 @@ jobs:
         user: '@token'
         # -- PyPI - Production
         password:
-          secure: lInroEnWgtxp8fABmvYOnvYtgl6Ndbcr22AckuVgEcFvFthLXqzoWHqtus3kkFiyyAn6ZOqSLDBDS9DeChqJa6TsL0Mvq+bRSCVfZ0aP+5zMgLEXVDJ6U3EM6R5BgpiAxRRvIZVH6FG7U0z5Uo+rGT0FyYCfFRW1D1htZs/VQ9zvefGAkff1lMwqZ1AOwF5/2HUWV5cuA24I8hmqbXhG9cw7IdLDovNf8bnstsx76Y5vmS+UC5qYbYh3WOF/nQc/pozIXcZw6Nu68tDYdDMrstOCGC5m2jJq2F7Bi9/4eyU5G38SzF16HXgKqpc5yabEqoQ+7Fm8WATlPKykP5odH8xdppn1ayoRemUgRh8HUDiiqQ511PJeASCjCW392havMvwCnqWdypxTNivmsJMF/4sANQ/6RM5e8y41gGuUKXqL1sOEcScWdeqC1F6/LiEK/S78Kk05thqjq5j33gn2SNPZ36LgM3vsBadmmll2ucwhIVDu+ezzk7VyNkrXHdR+76aflJyi0YrpQ44o9iHbFBLuRmrNmRzEgPCyygQm4WWp71+gFFSIz/uMArvaCQc6zQWVhJ3BUt6MgL+RHHiBbC2nQRWCrRao9mNIFE4BHg8DFA//rClitDWxgGSwxMRE2ZomFgNsZn/7c1d16AUyNa4g5BYWTsmXHREn1LYYzsQ=
+          secure: "VgrMLGkug+vTtfiuBJJRCVMqYL+sjB5aHMUdaKs1VIwbQNaK1qVMaIDJF1naK2i6p7WytZwqxFK/elZ/BsfqidPkoaAsFix2OjGwSCn8KKd4f4XPcMGo/D+Rs8UgfD6P9xFucL4VGItmoWrANP3bOtFcOlGJqKv3/2eN46cF/dNyJd8aeABeSX5oAXX9yGSloXMHE+5KCLLCDbyCI2qKGWKICcBqPAg6LZbcnlSuXYnT94FXvnUpGEvuF6B3pRXAG8gmPELzeTbKFb9QGoblGapmfPjn4qY9Q2W4u3IOT+UDgvqATfl8WmLMwU5KYdjO5KDEJuE1gKf6qqz3oYBfE2OfyAexNDFpmBEHS3qlsCn26JDq5gplQvKj/A8CO7XTpgtCwLSC+VgCYsB9rdWYyK39PzooUWmsSSGvmTb3Ht5ZSRzFE/iYbKiykHeiKug1u7opQ9aaRfZRkmYPE/v6RcCY3MNVs3Vk2TWp1hX60A1f0yg7/5N7+hnEcYDGLPjro7yGrEk3aZ8GmqPBYWQXH5LG9b+DDNxsy+TUwocurLH7RbjgzDJ0zFYvZO+hMPySLRUj1imY6M6zRuQDUdD8+IM7EC9QRVD4bbkgdSYtCmhuIe4YKQ5Vp3/IuukO2gxuDoX/M/seb9l7ZWz3WWtiRtkDhLHrhNUIHDKw9yqauaY="
         # -- PyPI - Testing
         #server: https://test.pypi.org/legacy/
         #password:
