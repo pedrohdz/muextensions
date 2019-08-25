@@ -9,7 +9,7 @@ def test_register_defaults(directives_mock):
     plantuml.register('a/target/directory')
     directives_mock.register_directive.assert_has_calls((
         call('plantuml-image', ANY),
-        call('plantuml', ANY)))
+        call('uml', ANY)))
     directive_class = directives_mock.register_directive.call_args[0][1]
     assert directive_class._target_dir == 'a/target/directory'
     assert directive_class._base_uri is None

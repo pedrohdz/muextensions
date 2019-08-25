@@ -61,5 +61,5 @@ def register(target_dir, base_uri=None, create_dir=False):
                             '_create_dirs': create_dir})
     directives.register_directive('plantuml-image', directive_class)
 
-    # TODO - Depricate the `plantuml` directive in favor of `plantuml-image`.
-    directives.register_directive('plantuml', directive_class)
+    # TODO - Depricate the `uml` directive in favor of `plantuml-image`.
+    directives.register_directive('uml', directive_class)

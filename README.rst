@@ -1,4 +1,4 @@
-.. COMMENT_OUT 
+.. COMMENT_OUT
 
 |Code Climate| |Build Status| |codecov| |PyPI version|
 
@@ -250,6 +250,7 @@ Todo list
   `figure
   <http://docutils.sourceforge.net/docs/ref/rst/directives.html#figure>`_.
 - [ ] Add REST callers for execs to speed things up even more.
+- [ ] Finish removing the deprecated `uml` directive.
 - [ ] Look into https://pypi.org/project/pbr/
 - [ ] Add Markdown support.
 
