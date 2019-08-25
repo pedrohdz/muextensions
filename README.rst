@@ -251,6 +251,8 @@ Todo list
 - [-] Finish adding plugin support to Hovercraft!  (`regebro/hovercraft#196
   <hovercraft_pr_196_>`_).
 - [ ] Add GitHub tickets for each of the following.
+- [ ] Get the sample images in ``./docs/images/`` to render on *PyPI*:
+  https://pypi.org/project/muextensions/.
 - [ ] Add caching.
 - [ ] Add a ``plantuml-text`` directive.  This should generate and embed ASCII
   art by way of ``plantuml -ttxt``.
