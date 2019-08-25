@@ -36,7 +36,7 @@ It allows for adding a *reStructuredText* block like the following:
 
 And having it embedded in the `Docutils`_ generated document as an image:
 
-.. image:: https://raw.githubusercontent.com/pedrohdz/muextensions/master/docs/images/simple-ditaa-example.svg
+.. image:: ./docs/images/simple-ditaa-example.svg
   :alt: Simple ditaa example
   :align: center
 
@@ -57,7 +57,7 @@ In the case of *PlantUML*, a block like:
 
 Would be rendered as:
 
-.. image:: https://raw.githubusercontent.com/pedrohdz/muextensions/master/docs/images/simple-plantuml-example.svg
+.. image:: ./docs/images/simple-plantuml-example.svg
   :alt: Simple PlantUML example
   :align: center
 
@@ -251,6 +251,7 @@ Todo list
 - [-] Finish adding plugin support to Hovercraft!  (`regebro/hovercraft#196
   <hovercraft_pr_196_>`_).
 - [ ] Add GitHub tickets for each of the following.
+- [ ] Make *ditaa* default to *SVG*.
 - [ ] Get the sample images in ``./docs/images/`` to render on *PyPI*:
   https://pypi.org/project/muextensions/.
 - [ ] Add caching.
